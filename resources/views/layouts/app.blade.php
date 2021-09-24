@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Winkel - Scouting Raamsdonksveer</title>
+    <title>4Shop - Fabian Dingemans</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,8 +22,11 @@
 <body>
     <div class="container">
       <header class="header d-flex justify-content-between align-items-center">
-        <h3 class="text-muted"><a href="{{ route('home') }}" class="no-link">Winkel van Scouting Raamsdonksveer</a></h3>
-        <a href="{{ route('cart') }}"><img class="cart" src="{{ url('img/cart.png') }}" alt=""></a>
+          <h3 class="text-muted">
+              <image src="./img/4S-Logo-Transparent.png" class="header-img"></image>
+              <a href="{{ route('home') }}" class="no-link">4Shop</a>
+          </h3>
+          <a href="{{ route('cart') }}"><img class="cart" src="{{ url('img/cart.png') }}" alt=""></a>
       </header>
 
       <main role="main">
@@ -38,12 +44,12 @@
             </ul>
           </div>
         @endif
-        
+
         @yield('content')
       </main>
 
       <footer class="footer">
-        <p><strong>Mail bij vragen: <a href="mailto:winkelbeheer@scoutingrveer.nl">winkelbeheer@scoutingrveer.nl</a></strong> &middot; S.B.B.S. namens Scouting Raamsdonksveer, Kerklaan 22 4942AR Raamsdonksveer, KvK: 41100325, tel: 0162769096.</p>
+        <p><strong>Mail bij vragen: <a href="mailto:winkelbeheer@scoutingrveer.nl">winkelbeheer@scoutingrveer.nl</a></strong> &middot; 4Shop, Tijdlaan 11 1111AA Breda, KvK: 01234567, tel: 0123456789.</p>
       </footer>
 
     </div>
