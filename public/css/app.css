@@ -90,6 +90,10 @@ header{
 	margin-top: 1em;
 }
 
+.product-discount{
+    color: red;
+}
+
 .no-link, .no-link:hover{
 	color: initial;
 	text-decoration: none;

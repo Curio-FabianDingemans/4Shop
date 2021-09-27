@@ -10,11 +10,15 @@
 					<div>
                         <div class="price-div">
                             <h5 class="product-title"><span>{{ $product->title }}</span></h5>
-                            <h5 class="product-title"><em>&euro;{{ $product->price }}</em></h5>
+                            <h5 class="product-title"><em>&euro;{{ $product->getPriceAttribute($product->price) }}</em></h5>
                         </div>
 						@unless(empty($product->description))
 							<p>{{ $product->description }}</p>
 						@endunless
+
+                        @if ($product->discount > 0)
+                            <span class="product-discount">Nu <strong>{{ $product->discount }}%</strong> kosting! Orginele prijs: €{{ $product->price }}</span>
+                        @endif
 					</div>
 					<button class="btn btn-primary">Meer info &amp; bestellen</button>
 				</div>

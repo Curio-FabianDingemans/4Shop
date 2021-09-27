@@ -23,8 +23,10 @@
     <div class="container">
       <header class="header d-flex justify-content-between align-items-center">
           <h3 class="text-muted">
-              <image src="./img/4S-Logo-Transparent.png" class="header-img"></image>
-              <a href="{{ route('home') }}" class="no-link">4Shop</a>
+              <a href="{{ route('home') }}" class="no-link">
+                <image src="{{asset('img/4S-Logo-Transparent.png')}}" class="header-img"></image>
+                4Shop
+              </a>
           </h3>
           <a href="{{ route('cart') }}"><img class="cart" src="{{ url('img/cart.png') }}" alt=""></a>
       </header>
