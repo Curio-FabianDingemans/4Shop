@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="d-flex justify-content-center my-5"> 
+<div class="d-flex justify-content-center my-5">
 
 	<form action="{{ route('admin.products.store') }}" method="POST" style="min-width: 320px;" enctype="multipart/form-data">
-		
+
 		<h4>Nieuw product</h4>
 
 		<div class="form-group">
@@ -21,6 +21,14 @@
 				<input type="number" min="0" id="price" name="price" class="form-control" value="{{ old('price') }}">
 			</div>
 		</div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" name="category" id="category">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
 		<div class="form-group my-4">
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" name="active" id="active1" value="1">
