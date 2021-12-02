@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="d-flex justify-content-between align-items-center my-4">
-        <h4>Producten</h4>
-        <div>
-            <a href="{{ route('admin.categories.create') }}">Nieuw catogorie toevoegen</a>
-        </div>
-    </div>
+	<div class="d-flex justify-content-between align-items-center my-4">
+		<h4>Catogorien</h4>
+		<div>
+			<a href="{{ route('admin.categories.create') }}">Nieuw product toevoegen</a>
+		</div>
+	</div>
 
     <table class="table table-striped table-hover">
         <tr>

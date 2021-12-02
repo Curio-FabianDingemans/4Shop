@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
-use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,6 +18,18 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('admin.categories.index')
                 ->with(compact('categories'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function view()
+    {
+        $categories = Category::all();
+        return view('admin.categories.index')
+            ->with(compact('categories'));
     }
 
     /**
